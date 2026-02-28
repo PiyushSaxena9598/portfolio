@@ -1,15 +1,39 @@
 @import "tailwindcss";
 
-body{
-    font-family: "poppins", sans-serif;
+/* ✅ GLOBAL RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-h1, h2{
-    font-family: "Roboto", sans-serif;
+/* ✅ MOST IMPORTANT FIX (WHITE SPACE ISSUE) */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-@layer utilities{
-    .gradient{
-        background: linear-gradient(-45deg, #302b63, #00bf8f, #1cd8d2);
-    }
+/* Smooth scrolling (optional but premium) */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000; /* prevent white flash */
+}
+
+/* Headings */
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Custom utilities */
+@layer utilities {
+  .gradient {
+    background: linear-gradient(-45deg, #302b63, #00bf8f, #1cd8d2);
+  }
 }
